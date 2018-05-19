@@ -284,7 +284,6 @@ function restAPI(id) {
         .catch(function (err) {
             console.log(err);
         })
-
 };
 
 function buildDom(res) {
