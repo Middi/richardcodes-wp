@@ -133,25 +133,22 @@ get_header(); ?>
     <section id="projects" class="projects">
         <div class="container">
             <h3 class="h3-display">Projects</h3>
-            <div class="filters">
-                <div class="filters-item active">RECENT</div>
-                <div class="filters-item">HTML</div>
-                <div class="filters-item">CSS</div>
-                <div class="filters-item">JAVASCRIPT</div>
-                <div class="filters-item">NODEJS</div>
-                <div class="filters-item">WORDPRESS</div>
-                <div class="filters-item">P5JS</div>
-                <div class="filters-item">PUG</div>
+            <div id="filters" class="filters">
+                <div class="filters-item active" data-key="11">RECENT</div>
+                <div class="filters-item" data-key="12">HTML</div>
+                <div class="filters-item" data-key="13">CSS</div>
+                <div class="filters-item" data-key="15">JAVASCRIPT</div>
+                <div class="filters-item" data-key="16">NODEJS</div>
+                <div class="filters-item" data-key="14">WORDPRESS</div>
+                <div class="filters-item" data-key="17">P5JS</div>
+                <div class="filters-item" data-key="18">PUG</div>
             </div>
-            <div class="card-container">
+            <div id="card-container" class="card-container">
                 <?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 6, 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
                     <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="card">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="card-image" style="background:url(<?php 
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail_url();
-                                    }?>); background-size:cover; background-position: center center;">
+                                <div class="card-image" style="background:url(<?php echo get_field('image') ?>); background-size:cover; background-position: center center;">
                                 </div>
                             </a>
                             <div class="card-text">

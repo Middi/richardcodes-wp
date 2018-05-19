@@ -912,7 +912,7 @@ iframe {
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0; }
 
-.projects {
+.projects, .other-articles {
   background-image: url("/wp-content/themes/richardcodes/assets/img/hero-bg.png");
   background-color: rgba(0, 0, 0, 0.04);
   width: 100%;
@@ -956,7 +956,8 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  min-height: 362px; }
   .card-container .card {
     height: 320px;
     width: 302px;
@@ -1088,7 +1089,7 @@ iframe {
 .article-container {
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 20px 100px; }
+  padding: 0 20px 140px; }
   .article-container .title {
     padding: 120px 10px 30px; }
   .article-container figure {
@@ -1097,7 +1098,7 @@ iframe {
       width: 100%; }
 
 .other-articles .card-container {
-  margin-bottom: 140px; }
+  padding: 80px 0 20px; }
   .other-articles .card-container .card {
     opacity: 1; }
 

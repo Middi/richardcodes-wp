@@ -26,12 +26,15 @@ function wpmudev_create_post_type() {
    register_post_type( 'project', array(
        'labels' => $labels,
        'has_archive' => true,
-        'public' => true,
-       'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+       'public' => true,
+       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes' ),
        'taxonomies' => array( 'post_tag', 'category' ),	
        'exclude_from_search' => false,
        'capability_type' => 'post',
        'rewrite' => array( 'slug' => 'projects' ),
+       'show_in_rest' => true,
+       'rest_base' => 'projects',
+       'rest_controller_class' => 'WP_REST_Posts_Controller',
        )
    );
    

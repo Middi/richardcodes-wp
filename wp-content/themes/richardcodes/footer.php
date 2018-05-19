@@ -11,8 +11,6 @@
 
 ?>
 
-
-
     <!--======== FOOTER SECTION ========-->
 
     <footer class="footer">
@@ -68,12 +66,6 @@
             <p class="footer-p">RichardCodes 2018</p>
         </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-
-    <!-- Javascript -->
-    <script src="<?php bloginfo('template_directory'); ?>/assets/js/main-min.js" type="text/javascript"></script>
 
 <?php wp_footer(); ?>
 

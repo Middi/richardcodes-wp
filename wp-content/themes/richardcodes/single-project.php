@@ -50,6 +50,7 @@ get_header();
     </div>
 
     <div class="other-articles">
+        <h3 class="h3-display">More Projects</h3>
         <div class="card-container">
             <?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 6, 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
                 <?php while( $loop->have_posts() ) : $loop->the_post(); ?>

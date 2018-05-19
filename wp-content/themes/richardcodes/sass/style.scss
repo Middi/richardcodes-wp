@@ -290,7 +290,7 @@ iframe {
     transform-origin: 0 0;
 }
 
-.projects {
+.projects, .other-articles {
     background-image: url('/wp-content/themes/richardcodes/assets/img/hero-bg.png');
     background-color: $lightest-grey;
     width: 100%;
@@ -329,6 +329,7 @@ iframe {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    min-height: 362px;
     .card {
         height: 320px;
         width: 302px;
@@ -458,7 +459,7 @@ iframe {
 .article-container {
     max-width: 700px;
     margin: 0 auto;
-    padding: 0 20px 100px;
+    padding: 0 20px 140px;
     .title {padding: 120px 10px 30px}
     figure {
         margin-bottom: 38px;
@@ -467,8 +468,10 @@ iframe {
 }
 
 .other-articles .card-container {
-    margin-bottom: 140px;
-    .card {opacity: 1}
+    padding: 80px 0 20px;
+    .card {
+        opacity: 1
+    }
 }
 
 .article nav {
