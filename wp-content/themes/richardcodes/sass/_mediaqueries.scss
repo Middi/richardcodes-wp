@@ -1,0 +1,128 @@
+
+@media all and (max-width: 1200px) {
+    header {
+        background-image: url('http://richardmiddleton.me/projects/richardcodes/assets/img/mobile-bg.png');
+        background-color: $brand;
+        height: 100%;
+        .span-display {
+            color: white;
+        }
+    }
+    .hero-skew {
+        display: none;
+    }
+
+    .hero-container iframe {margin: 10px 0}
+
+    .hero-text {
+        text-align: center;
+        max-width: 560px;
+    }
+
+    .hero-text-upper {
+        flex-direction: column;
+    }
+
+    .about {
+        background: none;
+        &-container {
+            display: block;
+            padding: 0 25px;
+            &-text {
+                width: 100%;
+                max-width: 700px;
+            }
+        }
+    }
+    .about-skew {
+        display: none;
+    }
+
+    .social-container {
+        max-width: 472px;
+        &-half:nth-child(1) {
+            border: none;
+        }
+    }
+}
+
+
+@media all and (max-width: 720px) {
+    .container-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+    }
+
+    nav {
+        background-image: url('http://richardmiddleton.me/projects/richardcodes/assets/img/menu-bg.png');
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        transform: translateY(-100vh);
+    }
+    nav ul {
+        padding: 40px 0;
+        transform: translateX(0);
+    }
+    
+    nav ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+    nav ul li a {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .hero-text {
+        max-width: 400px;
+        margin: -30px 30px 0;
+        .h1-display {
+            font-size: 2.2rem;
+        }
+        .highlight {
+            font-size: .8rem;
+        }
+    }
+
+    .hero-container iframe {
+        width: 336px;
+        height: 189px;
+    }
+
+    .article-container {
+        padding: 0 20px 60px;
+        .title {padding: 60px 10px 30px}
+    }
+
+}
+  
+
+
+@media all and (max-width: 471px) {
+    
+    html {font-size: 14px}
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    #navToggle {
+        right: 8px;
+        top: 8px;
+    }
+
+    .social-container {
+        max-width: 320px;
+        .insta-grid{
+            justify-content: center;
+            &-pic {
+                width: 70px;
+            }
+        }
+    }
+
+}
