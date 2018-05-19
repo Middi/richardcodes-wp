@@ -338,19 +338,22 @@ iframe {
         background-color: white;
         opacity: 0;
         &-image {
-            background-image: url('/wp-content/themes/richardcodes/assets/img/card-img.jpg');
-            background-size: cover;
             height: 172px;
             width: 302px;
         }
         &-text {
             text-align: center;
             padding: 0 12px;
+            position: relative;
             &-more {
                 display: flex;
                 width: 120px;
                 margin: 0 auto;
                 justify-content: space-between;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
                 .more:hover {
                     path {
                         fill: $github

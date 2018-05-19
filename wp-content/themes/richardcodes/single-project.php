@@ -27,7 +27,7 @@ get_header();
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">BACK</a></li>
+                    <li><a href="/">BACK</a></li>
                 </ul>
             </nav>
         </div>

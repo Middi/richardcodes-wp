@@ -966,13 +966,12 @@ iframe {
     background-color: white;
     opacity: 0; }
     .card-container .card-image {
-      background-image: url("/wp-content/themes/richardcodes/assets/img/card-img.jpg");
-      background-size: cover;
       height: 172px;
       width: 302px; }
     .card-container .card-text {
       text-align: center;
-      padding: 0 12px; }
+      padding: 0 12px;
+      position: relative; }
       .card-container .card-text-more {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -981,7 +980,11 @@ iframe {
         margin: 0 auto;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; }
+                justify-content: space-between;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0; }
         .card-container .card-text-more .more:hover path {
           fill: #181717; }
 
