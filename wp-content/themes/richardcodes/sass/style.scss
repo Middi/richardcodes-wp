@@ -341,6 +341,7 @@ iframe {
         &-image {
             height: 172px;
             width: 302px;
+            border-bottom: 1px solid $middle-grey;
         }
         &-text {
             text-align: center;
@@ -420,8 +421,13 @@ iframe {
         .contact-text {
             padding-bottom: 100px;
             .p-mail {
-                color: $darkest-grey;
-                text-decoration: underline;
+                color: $black;
+                background-color: $brand;
+                display: inline;
+                padding: 2px 10px;
+                &:hover {
+                    background-color: darken($brand, 2);
+                }
             }
         }
     }

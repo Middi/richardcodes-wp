@@ -214,8 +214,7 @@ get_header(); ?>
         <div class="social-container">
             <div class="social-container-half">
                 <div class="insta-header">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/instagram.png" alt="instagram">
-                    <h4 class="h4-display">INSTAGRAM</h4>
+                    <h5 class="highlight">INSTAGRAM</h5>
                 </div>
 
                 <div id="insta-grid" class="insta-grid">
@@ -223,12 +222,11 @@ get_header(); ?>
             </div>
             <div class="social-container-half">
                 <div class="twitter-header">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/email.png" alt="instagram">
-                    <h4 class="h4-display">CONTACT</h4>
+                    <h5 class="highlight">CONTACT</h5>
                 </div>
                 <div class="contact-text">
                     <p class="p-display">Feel free to contact me and I will get back to you as soon as I can.</p>
-                    <a href="mailto:richard@richardmiddleton.me"><p class="p-display p-mail">richard[at]richardmiddleton.me</p></a>
+                    <a href="mailto:richard@richardmiddleton.me"><strong><p class="p-display p-mail">richard[at]richardmiddleton.me</p></strong></a>
                 </div>
                 
             </div>
