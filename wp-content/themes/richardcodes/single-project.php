@@ -52,14 +52,11 @@ get_header();
     <div class="other-articles">
         <h3 class="h3-display">More Projects</h3>
         <div class="card-container">
-            <?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 6, 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 3, 'orderby' => 'rand', 'order' => 'ASC' ) ); ?>
                 <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
                     <div class="card">
                         <a href="<?php the_permalink(); ?>">
-                            <div class="card-image" style="background:url(<?php 
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail_url();
-                                }?>); background-size:cover; background-position: center center;">
+                            <div class="card-image" style="background:url(<?php echo get_field('image') ?>); background-size:cover; background-position: center center;">
                             </div>
                         </a>
                         <div class="card-text">
