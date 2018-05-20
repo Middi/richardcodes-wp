@@ -23,8 +23,13 @@
         flex-direction: column;
     }
 
+    .projects, .other-articles {
+        padding: 30px 0;
+    }
+
     .about {
         background: none;
+        padding: 50px 0;
         &-container {
             display: block;
             padding: 0 25px;

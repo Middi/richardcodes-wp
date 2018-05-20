@@ -916,7 +916,7 @@ iframe {
   background-image: url("/wp-content/themes/richardcodes/assets/img/hero-bg.png");
   background-color: rgba(0, 0, 0, 0.04);
   width: 100%;
-  padding: 80px 0; }
+  padding: 60px 0; }
 
 .filters {
   display: -webkit-box;
@@ -1136,8 +1136,11 @@ iframe {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .projects, .other-articles {
+    padding: 30px 0; }
   .about {
-    background: none; }
+    background: none;
+    padding: 50px 0; }
     .about-container {
       display: block;
       padding: 0 25px; }

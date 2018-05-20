@@ -270,9 +270,7 @@ document.querySelector("#filters").addEventListener("click", function (e) {
 
 
 function restAPI(id) {
-    console.log('set');
-    const container = document.querySelector('#cardy');
-    const url = `http://richardcodeswp.local/wp-json/wp/v2/projects?categories=${id}&embed`;
+    const url = `http://richardcodeswp.local/wp-json/wp/v2/projects?categories=${id}`;
 
     fetch(url)
         .then(function (res) {
@@ -288,7 +286,6 @@ function restAPI(id) {
             buildDom(res);
         })
         .catch(function (err) {
-            console.log(err);
         })
 };
 
@@ -298,23 +295,24 @@ function buildDom(res) {
         cardCont.innerHTML = "";
     }
 
-    console.log(res);
-    res.forEach(function (item) {
+    let i = 0;
 
-        var excerptRend = item.excerpt.rendered.substr(3);
+    while (i < 6 || res.length) {
+        
+        var excerptRend = res[i].excerpt.rendered.substr(3);
         var excerpt = excerptRend.substr(0, excerptRend.length - 5);
 
         var dom = `<div class="card card-animation">
-    <a href="${item.link}">
-        <div class="card-image" style="background:url('${item.acf.image}'); background-size:cover; background-position: center center;"></div>
+    <a href="${res[i].link}">
+        <div class="card-image" style="background:url('${res[i].acf.image}'); background-size:cover; background-position: center center;"></div>
     </a>
     <div class="card-text">
-        <a href="${item.link}">
-            <h4 class="h4-display">${item.title.rendered}</h4>
+        <a href="${res[i].link}">
+            <h4 class="h4-display">${res[i].title.rendered}</h4>
         </a>
         <p class="card-p">${excerpt}</p>
         <div class="card-text-more">
-            <a href="${item.acf.url}" class="more" title="view">
+            <a href="${res[i].acf.url}" class="more" title="view">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-8 -4 23 23"
                     width="32" height="53" xml:space="preserve">
                     <g>
@@ -332,14 +330,14 @@ function buildDom(res) {
                     </g>
                 </svg>
             </a>
-            <a href="${item.acf.github_url}" class="more" title="github">
+            <a href="${res[i].acf.github_url}" class="more" title="github">
                 <svg version="1.1" viewBox="-6 -15 36 40" width="32" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     xml:space="preserve">
                     <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                         fill="#757575" />
                 </svg>
             </a>
-            <a href="${item.link}" class="more" title="Case Study">
+            <a href="${res[i].link}" class="more" title="Case Study">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px"
                     height="50px" viewBox="0 -190 900 900" xml:space="preserve">
                     <g>
@@ -356,8 +354,8 @@ function buildDom(res) {
     </div>
 </div>`;
         cardCont.innerHTML += dom;
-
-    });
+    i++;
+    }
 }
 
 
@@ -389,7 +387,6 @@ instaAPI();
 
 function buildInsta(res) {
 
-    console.log(res);
     for(var i=0; i<8; i++){
 
         var resImg = res.data[i].images.thumbnail.url;
@@ -402,7 +399,4 @@ function buildInsta(res) {
 
         instaGrid.innerHTML += image;
     }
-
-    
-
 }

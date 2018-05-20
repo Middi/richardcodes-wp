@@ -48,8 +48,7 @@ get_header(); ?>
                     <h5 class="highlight">Web Developer & Teacher</h5>
                 </div>
                 <h1 class="h1-display">Hey! I'm
-                    <span class="span-display">Richard</span> & this is my website, feel free to have a look around
-                    <span class="span-display">.</span>
+                    <span class="span-display">Richard</span> & this is my website, feel free to have a look around<span class="span-display">.</span>
                 </h1>
             </div>
             <iframe src="https://www.youtube.com/embed/gLWIYk0Sd38?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
