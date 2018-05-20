@@ -106,6 +106,12 @@
         padding: 0 20px 60px;
         .title {padding: 60px 10px 30px}
     }
+    .article nav {
+        width: 100%;
+        ul {
+            transform: translateX(0px);
+        }
+    }
 
 }
   

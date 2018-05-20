@@ -1198,7 +1198,12 @@ iframe {
   .article-container {
     padding: 0 20px 60px; }
     .article-container .title {
-      padding: 60px 10px 30px; } }
+      padding: 60px 10px 30px; }
+  .article nav {
+    width: 100%; }
+    .article nav ul {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px); } }
 
 @media all and (max-width: 471px) {
   html {
