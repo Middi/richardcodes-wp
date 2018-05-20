@@ -39,9 +39,7 @@ get_header();
                 <h1 class="h1-title"><?php echo get_the_title( $post_id ); ?></h1>
             </div>
             <figure>
-                <img src="<?php if ( has_post_thumbnail() ) {
-                    the_post_thumbnail_url();
-                }?>" alt="article image">
+                <img src="<?php echo get_field('image') ?>" alt="article image">
             </figure>
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
