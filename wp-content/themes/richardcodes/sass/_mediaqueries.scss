@@ -38,6 +38,10 @@
         display: none;
     }
 
+    .social {
+        height: 700px;
+    }
+
     .social-container {
         max-width: 472px;
         &-half:nth-child(1) {
@@ -120,8 +124,12 @@
         .insta-grid{
             justify-content: center;
             &-pic {
-                width: 70px;
+                width: 68px;
+                height: 68px;
             }
+        }
+        .p-mail {
+            font-size: 1.2rem;
         }
     }
 

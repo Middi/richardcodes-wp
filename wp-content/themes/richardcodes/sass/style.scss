@@ -408,8 +408,20 @@ iframe {
             align-items: start;
             margin: 15px 0;
             &-pic {
-                width: 88px;
+                width: 86px;
+                height: 86px;
+                border: 1px solid $light-grey;
                 margin: 10px 15px 10px 0;
+                &:hover {
+                    opacity: 0.86;
+                }
+            }
+        }
+        .contact-text {
+            padding-bottom: 100px;
+            .p-mail {
+                color: $darkest-grey;
+                text-decoration: underline;
             }
         }
     }

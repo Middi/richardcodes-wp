@@ -451,7 +451,7 @@ strong {
   font-weight: 700; }
 
 .p-display {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Montserrat', sans-serif;
   margin: 1.1em 0; }
 
@@ -1044,8 +1044,17 @@ iframe {
               align-items: start;
       margin: 15px 0; }
       .social-container .insta-grid-pic {
-        width: 88px;
+        width: 86px;
+        height: 86px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
         margin: 10px 15px 10px 0; }
+        .social-container .insta-grid-pic:hover {
+          opacity: 0.86; }
+    .social-container .contact-text {
+      padding-bottom: 100px; }
+      .social-container .contact-text .p-mail {
+        color: #424242;
+        text-decoration: underline; }
 
 .footer {
   background-color: #424242;
@@ -1137,6 +1146,8 @@ iframe {
         max-width: 700px; }
   .about-skew {
     display: none; }
+  .social {
+    height: 700px; }
   .social-container {
     max-width: 472px; }
     .social-container-half:nth-child(1) {
@@ -1201,4 +1212,7 @@ iframe {
           -ms-flex-pack: center;
               justify-content: center; }
       .social-container .insta-grid-pic {
-        width: 70px; } }
+        width: 68px;
+        height: 68px; }
+    .social-container .p-mail {
+      font-size: 1.2rem; } }

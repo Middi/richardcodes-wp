@@ -14,6 +14,8 @@ const socialContainer = document.querySelector('.social-container');
 const liList = document.querySelectorAll('nav ul li');
 const contNav = document.querySelector('#container-nav');
 const cardCont = document.querySelector('#card-container');
+const filterClass = document.querySelectorAll('.filters-item');
+const instaGrid = document.querySelector('#insta-grid');
 
 
 // MOBILE TOGGLE
@@ -257,6 +259,10 @@ document.querySelector("#filters").addEventListener("click", function (e) {
     if (e.target && e.target.matches(".filters-item")) {
         // List item found!  Output the ID!
         // console.log("List item ", e.target.id.replace("post-", ""), " was clicked!");
+        for(var i=0; i< filterClass.length; i++){
+            filterClass[i].classList.remove('active');
+        }
+        e.target.classList.add('active');
         restAPI(e.target.getAttribute('data-key'));
     }
 });
@@ -352,4 +358,51 @@ function buildDom(res) {
         cardCont.innerHTML += dom;
 
     });
+}
+
+
+//INSTAGRAM API
+function instaAPI() {
+
+    var token = '178595410.7e82061.56428f51fa2d4779856bf0af509aa91c';
+    var instaURL = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${token}`;
+    
+    fetch(instaURL)
+        .then(function (res) {
+            if (!res.ok) {
+                throw Error(res.statusText);
+            }
+            return res;
+        })
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (res) {
+            buildInsta(res);
+        })
+        .catch(function (err) {
+            console.log(err);
+        })
+}
+
+instaAPI();
+
+function buildInsta(res) {
+
+    console.log(res);
+    for(var i=0; i<8; i++){
+
+        var resImg = res.data[i].images.thumbnail.url;
+        
+        var image = `<a href="https://instagram.com/richardcodes">
+            <div class="insta-grid-pic" style="background:url('${resImg}'); background-size:cover; background-position: center center;">
+
+            </div>
+        </a>`;
+
+        instaGrid.innerHTML += image;
+    }
+
+    
+
 }
