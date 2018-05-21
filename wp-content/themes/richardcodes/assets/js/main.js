@@ -41,7 +41,7 @@ if (window.addEventListener) {
     window.addEventListener("keydown", function (e) {
         keys.push(e.keyCode);
         if (keys.toString().indexOf(konami) >= 0) {
-            window.location = "/wp-login.php";
+            window.location = "/anklebiters1918";
             keys = [];
         }
     }, true);
