@@ -254,11 +254,7 @@ function jump(target, options) {
 
 // Get the element, add a click listener...
 document.querySelector("#filters").addEventListener("click", function (e) {
-    // e.target is the clicked element!
-    // If it was a list item
     if (e.target && e.target.matches(".filters-item")) {
-        // List item found!  Output the ID!
-        // console.log("List item ", e.target.id.replace("post-", ""), " was clicked!");
         for(var i=0; i< filterClass.length; i++){
             filterClass[i].classList.remove('active');
         }
@@ -312,7 +308,8 @@ function buildDom(res) {
         </a>
         <p class="card-p">${excerpt}</p>
         <div class="card-text-more">
-            <a href="${res[i].acf.url}" class="more" title="view">
+        ${res[i].acf.url ?
+            `<a href="${res[i].acf.url}" class="more" title="view">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-8 -4 23 23"
                     width="32" height="53" xml:space="preserve">
                     <g>
@@ -329,7 +326,11 @@ function buildDom(res) {
                                             C13.928,8.704,13.762,9.377,13.502,10z M11.99,7c-0.027-0.697-0.112-1.368-0.246-2h1.758c0.26,0.623,0.426,1.296,0.479,2H11.99z" fill="#757575" />
                     </g>
                 </svg>
-            </a>
+            </a>` : ``
+            
+        }
+        ${res[i].acf.github_url ?
+            `
             <a href="${res[i].acf.github_url}" class="more" title="github">
                 <svg version="1.1" viewBox="-6 -15 36 40" width="32" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     xml:space="preserve">
@@ -337,6 +338,8 @@ function buildDom(res) {
                         fill="#757575" />
                 </svg>
             </a>
+            ` : ``
+        }
             <a href="${res[i].link}" class="more" title="Case Study">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px"
                     height="50px" viewBox="0 -190 900 900" xml:space="preserve">
@@ -367,7 +370,7 @@ function instaAPI() {
     
     fetch(instaURL)
         .then(function (res) {
-            if (!res.ok) {
+            if (res.status !== 200) {
                 throw Error(res.statusText);
             }
             return res;
@@ -386,12 +389,13 @@ function instaAPI() {
 instaAPI();
 
 function buildInsta(res) {
-
+console.log(res);
     for(var i=0; i<8; i++){
 
         var resImg = res.data[i].images.thumbnail.url;
+        var link = res.data[i].link;
         
-        var image = `<a href="https://instagram.com/richardcodes">
+        var image = `<a href="${link}" target="_blank">
             <div class="insta-grid-pic" style="background:url('${resImg}'); background-size:cover; background-position: center center;">
 
             </div>

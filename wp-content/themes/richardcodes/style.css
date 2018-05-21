@@ -978,15 +978,16 @@ iframe {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        width: 120px;
         margin: 0 auto;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         position: absolute;
         top: 80px;
         left: 0;
         right: 0; }
+        .card-container .card-text-more .more {
+          padding: 0 8px; }
         .card-container .card-text-more .more:hover path {
           fill: #181717; }
 

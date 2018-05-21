@@ -349,13 +349,15 @@ iframe {
             position: relative;
             &-more {
                 display: flex;
-                width: 120px;
                 margin: 0 auto;
-                justify-content: space-between;
+                justify-content: center;
                 position: absolute;
                 top: 80px;
                 left: 0;
                 right: 0;
+                .more {
+                    padding: 0 8px;
+                }
                 .more:hover {
                     path {
                         fill: $github
