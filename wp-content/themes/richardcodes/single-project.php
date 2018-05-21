@@ -39,7 +39,7 @@ get_header();
                 <h1 class="h1-title"><?php echo get_the_title( $post_id ); ?></h1>
             </div>
             <figure>
-                <img src="<?php echo get_field('image') ?>" alt="article image">
+                <img src="<?php echo get_field('image')['sizes']['large'] ?>" alt="article image">
             </figure>
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
@@ -54,7 +54,7 @@ get_header();
                 <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
                     <div class="card">
                         <a href="<?php the_permalink(); ?>">
-                            <div class="card-image" style="background:url(<?php echo get_field('image') ?>); background-size:cover; background-position: top center;">
+                            <div class="card-image" style="background:url(<?php echo get_field('image')['sizes']['medium'] ?>); background-size:cover; background-position: top center;">
                             </div>
                         </a>
                         <div class="card-text">

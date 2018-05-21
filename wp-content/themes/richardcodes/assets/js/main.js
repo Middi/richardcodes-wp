@@ -266,7 +266,7 @@ document.querySelector("#filters").addEventListener("click", function (e) {
 
 
 function restAPI(id) {
-    const url = `http://richardcodeswp.local/wp-json/wp/v2/projects?categories=${id}`;
+    const url = `https://richardmiddleton.me/wp-json/wp/v2/projects?categories=${id}`;
 
     fetch(url)
         .then(function (res) {
@@ -293,6 +293,8 @@ function buildDom(res) {
 
     let i = 0;
 
+    console.log(res);
+
     while (i < 6 || res.length) {
         
         var excerptRend = res[i].excerpt.rendered.substr(3);
@@ -300,7 +302,7 @@ function buildDom(res) {
 
         var dom = `<div class="card card-animation">
     <a href="${res[i].link}">
-        <div class="card-image" style="background:url('${res[i].acf.image}'); background-size:cover; background-position: center center;"></div>
+        <div class="card-image" style="background:url('${res[i].acf.image.sizes.medium_large}'); background-size:cover; background-position: center center;"></div>
     </a>
     <div class="card-text">
         <a href="${res[i].link}">

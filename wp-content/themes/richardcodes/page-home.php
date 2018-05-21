@@ -148,7 +148,7 @@ get_header(); ?>
                     <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="card">
                             <a href="<?php the_permalink(); ?>">
-                                <div class="card-image" style="background:url(<?php echo get_field('image') ?>); background-size:cover; background-position: top center;">
+                                <div class="card-image" style="background:url(<?php echo get_field('image')['sizes']['medium'] ?>); background-size:cover; background-position: top center;">
                                 </div>
                             </a>
                             <div class="card-text">
