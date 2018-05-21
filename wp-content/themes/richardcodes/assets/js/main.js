@@ -254,12 +254,12 @@ function jump(target, options) {
 
 // Get the element, add a click listener...
 document.querySelector("#filters").addEventListener("click", function (e) {
+    restAPI(e.target.getAttribute('data-key'));
     if (e.target && e.target.matches(".filters-item")) {
         for(var i=0; i< filterClass.length; i++){
             filterClass[i].classList.remove('active');
         }
         e.target.classList.add('active');
-        restAPI(e.target.getAttribute('data-key'));
     }
 });
 
@@ -267,6 +267,17 @@ document.querySelector("#filters").addEventListener("click", function (e) {
 
 function restAPI(id) {
     const url = `https://richardmiddleton.me/wp-json/wp/v2/projects?categories=${id}`;
+
+    // SPINNER
+    cardCont.innerHTML = `
+        <div class="spinner">
+            <div class="right-side">
+                <div class="bar"></div>
+            </div>
+            <div class="left-side">
+                <div class="bar"></div>
+            </div>
+        </div>`;
 
     fetch(url)
         .then(function (res) {
@@ -282,6 +293,7 @@ function restAPI(id) {
             buildDom(res);
         })
         .catch(function (err) {
+            console.log(err);
         })
 };
 
@@ -293,8 +305,6 @@ function buildDom(res) {
 
     let i = 0;
 
-    console.log(res);
-
     while (i < 6 || res.length) {
         
         var excerptRend = res[i].excerpt.rendered.substr(3);
@@ -302,7 +312,7 @@ function buildDom(res) {
 
         var dom = `<div class="card card-animation">
     <a href="${res[i].link}">
-        <div class="card-image" style="background:url('${res[i].acf.image.sizes.medium_large}'); background-size:cover; background-position: center center;"></div>
+        <div class="card-image" style="background:url('${res[i].acf.image.sizes.medium}'); background-size:cover; background-position: center center;"></div>
     </a>
     <div class="card-text">
         <a href="${res[i].link}">
@@ -391,7 +401,6 @@ function instaAPI() {
 instaAPI();
 
 function buildInsta(res) {
-console.log(res);
     for(var i=0; i<8; i++){
 
         var resImg = res.data[i].images.thumbnail.url;
