@@ -80,15 +80,6 @@
     border: 10px solid $black;
     position: relative;
     box-sizing: border-box;
-    &:after {
-        content: "";
-        width: 10px;
-        height: 10px;
-        display: block;
-        background: rgba(0, 0, 0, 0.4);
-        position: absolute;
-        border-radius: 10px;
-    }
 }
 
 .right-side .bar {
@@ -97,10 +88,6 @@
     transform: rotate(-10deg);
     transform-origin: left center;
     animation: rotate-right 0.75s linear infinite alternate;
-    &:after {
-        bottom: -10px;
-        left: -5px;
-    }
 }
 
 .left-side .bar {
@@ -108,10 +95,6 @@
     transform: rotate(10deg);
     transform-origin: right center;
     animation: rotate-left 0.75s linear infinite alternate;
-    &:after {
-        bottom: -10px;
-        right: -5px;
-    }
 }
 
 @keyframes rotate-left {
