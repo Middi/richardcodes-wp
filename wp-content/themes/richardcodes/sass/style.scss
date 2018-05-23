@@ -195,7 +195,7 @@ nav ul li:hover a,
 
 .hero-container {
     max-width: 1200px;
-    padding: 100px 0; // z-index: 100;
+    padding: 100px 0;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -343,7 +343,7 @@ iframe {
     flex-wrap: wrap;
     min-height: 362px;
     .card {
-        height: 320px;
+        height: 330px;
         width: 302px;
         margin: 0 14px 40px;
         border: 1px solid lighten($grey, 60);
@@ -364,7 +364,7 @@ iframe {
                 margin: 0 auto;
                 justify-content: center;
                 position: absolute;
-                top: 80px;
+                top: 90px;
                 left: 0;
                 right: 0;
                 .more {
@@ -496,7 +496,8 @@ iframe {
         word-break: break-all;
     }
     img {
-        max-width: 100%;
+        width: 100%!important;
+        height: auto!important;
     }
     figure {
         margin-bottom: 38px;

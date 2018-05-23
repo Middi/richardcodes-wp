@@ -99,9 +99,12 @@
         }
     }
 
-    .hero-container iframe {
+    .hero-container iframe, .article-container iframe {
         width: 336px;
         height: 189px;
+    }
+    .article-container iframe {
+        text-align: center;
     }
 
     .article-container {
