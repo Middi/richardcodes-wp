@@ -182,6 +182,16 @@ nav ul li:hover a,
         background-position: 26px 36px;
     }
 }
+.skew-button {
+    height: 90px;
+    width: 100px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    transform: translateX(24px) skew(-10deg);
+}
 
 .hero-container {
     max-width: 1200px;

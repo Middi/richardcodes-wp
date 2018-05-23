@@ -40,7 +40,10 @@ get_header(); ?>
             </nav>
         </div>
 
-        <div class="hero-skew"></div>
+        <div class="hero-skew">
+        </div>
+        <a href="#about" class="skew-button">
+        </a>
         <div class="hero-container">
             <div class="hero-text">
                 <div class="hero-text-upper">
