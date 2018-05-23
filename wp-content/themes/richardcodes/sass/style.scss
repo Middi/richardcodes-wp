@@ -495,12 +495,9 @@ iframe {
     a {
         word-break: break-all;
     }
-    img {
-        width: 100%!important;
-        height: auto!important;
-    }
     figure {
         margin-bottom: 38px;
+        border: 1px solid lighten($grey, 60);
         img {width: 100%}
     }
 }
