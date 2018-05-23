@@ -144,7 +144,7 @@ get_header(); ?>
                 <div class="filters-item" data-key="18">PUG</div>
             </div>
             <div id="card-container" class="card-container">
-                <?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 6, 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+                <?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 6, 'orderby' => 'post_id', 'order' => 'DES' ) ); ?>
                     <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="card">
                             <a href="<?php the_permalink(); ?>">
