@@ -492,6 +492,12 @@ iframe {
     margin: 0 auto;
     padding: 0 20px 140px;
     .title {padding: 120px 10px 30px}
+    a {
+        word-break: break-all;
+    }
+    img {
+        max-width: 100%;
+    }
     figure {
         margin-bottom: 38px;
         img {width: 100%}
