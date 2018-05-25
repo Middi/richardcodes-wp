@@ -253,15 +253,17 @@ function jump(target, options) {
 // AJAX FOR PROJECTS
 
 // Get the element, add a click listener...
-document.querySelector("#filters").addEventListener("click", function (e) {
-    restAPI(e.target.getAttribute('data-key'));
-    if (e.target && e.target.matches(".filters-item")) {
-        for(var i=0; i< filterClass.length; i++){
-            filterClass[i].classList.remove('active');
+if(document.querySelector("#filters")) {
+    document.querySelector("#filters").addEventListener("click", function (e) {
+        restAPI(e.target.getAttribute('data-key'));
+        if (e.target && e.target.matches(".filters-item")) {
+            for(var i=0; i< filterClass.length; i++){
+                filterClass[i].classList.remove('active');
+            }
+            e.target.classList.add('active');
         }
-        e.target.classList.add('active');
-    }
-});
+    });
+}
 
 
 
@@ -305,7 +307,7 @@ function buildDom(res) {
 
     let i = 0;
 
-    while (i < 6 || res.length) {
+    while (i < res.length && i < 6) {
         
         var excerptRend = res[i].excerpt.rendered.substr(3);
         var excerpt = excerptRend.substr(0, excerptRend.length - 5);
