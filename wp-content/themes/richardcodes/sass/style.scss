@@ -1,37 +1,12 @@
+/*=============================================
+=                 STYLESHEET                 =
+=============================================*/
+
 @import 'wordpress';
 @import 'normalise';
 @import 'colors';
 @import 'typography';
 @import 'animations';
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section:focus {
-    outline: none
-}
-
-header {
-    background: url('/wp-content/themes/richardcodes/assets/img/hero-bg.png')repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.header-blog {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
 
 // NAVIGATION
 .container-nav {
@@ -49,10 +24,7 @@ header {
     transition: 400ms all ease-in-out;
 }
 
-
-.cont-nav-open {
-    height: 100vh;
-}
+.cont-nav-open {height: 100vh}
 
 nav {
     text-align: right;
@@ -97,13 +69,12 @@ nav ul li a {
     border-radius: 2px;
 }
 
-nav ul li:hover a,
-.nav-active {
+nav ul li:hover a, .nav-active {
     color: $brand;
     background-color: $black;
 }
 
-/* Mobile Toggle */
+// Mobile Toggle 
 
 #navToggle {
     position: absolute;
@@ -121,9 +92,7 @@ nav ul li:hover a,
     width: 30px;
 }
 
-#navToggle:hover span {
-    opacity: 0.8
-}
+#navToggle:hover span {opacity: 0.8}
 
 #navToggle span {
     position: absolute;
@@ -137,30 +106,53 @@ nav ul li:hover a,
     cursor: pointer;
 }
 
-#navToggle span:nth-child(1) {
-    top: 0px
-}
+#navToggle span:nth-child(1) {top: 0px}
 
-#navToggle span:nth-child(2) {
-    top: 9px
-}
+#navToggle span:nth-child(2) {top: 9px}
 
-#navToggle span:nth-child(3) {
-    top: 18px
-}
+#navToggle span:nth-child(3) {top: 18px}
 
 #navToggle.open span:nth-child(1) {
     top: 9px;
     transform: rotate(135deg);
 }
 
-#navToggle.open span:nth-child(2) {
-    opacity: 0
-}
+#navToggle.open span:nth-child(2) {opacity: 0}
 
 #navToggle.open span:nth-child(3) {
     top: 9px;
     transform: rotate(-135deg);
+}
+
+// Hero Image
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section:focus {
+    outline: none
+}
+
+header {
+    background: url('/wp-content/themes/richardcodes/assets/img/hero-bg.png')repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-blog {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-skew {
@@ -227,6 +219,8 @@ iframe {
     box-shadow: 6px 6px 12px 2px rgba($black, 0.5);
 }
 
+// About Section
+
 .about {
     background: url('/wp-content/themes/richardcodes/assets/img/about-bg.jpg');
     background-size: contain;
@@ -256,9 +250,7 @@ iframe {
                     border-radius: 40px;
                     display: flex;
                     transition: all 2s ease;
-                    path {
-                        transition: fill .4s ease
-                    }
+                    path {transition: fill .4s ease}
                 }
             }
         }
@@ -269,26 +261,17 @@ iframe {
     }
 }
 
+// Social Media Path Colors
 
-#instagram:hover path {
-    fill: $instagram
-}
+#instagram:hover path {fill: $instagram}
 
-#youtube:hover path {
-    fill: $youtube
-}
+#youtube:hover path {fill: $youtube}
 
-#twitch:hover path {
-    fill: $twitch
-}
+#twitch:hover path {fill: $twitch}
 
-#github:hover path {
-    fill: $github
-}
+#github:hover path {fill: $github}
 
-#email:hover path {
-    fill: $brand
-}
+#email:hover path {fill: $brand}
 
 .about-skew {
     background-color: white;
@@ -301,6 +284,8 @@ iframe {
     transform: skew(-8deg);
     transform-origin: 0 0;
 }
+
+// Project Section
 
 .projects, .other-articles {
     background-image: url('/wp-content/themes/richardcodes/assets/img/hero-bg.png');
@@ -371,13 +356,13 @@ iframe {
                     padding: 0 8px;
                     opacity: 0.5;
                 }
-                .more:hover {
-                    opacity: 0.7;
-                }
+                .more:hover {opacity: 0.7}
             }
         }
     }
 }
+
+// Social Media Section
 
 .social {
     height: 400px;
@@ -404,17 +389,12 @@ iframe {
                 width: 36px;
                 margin-right: 10px;
             }
-            &:nth-child(1) {
-                border-right: 1px solid $middle-grey;
-            }
+            &:nth-child(1) {border-right: 1px solid $middle-grey}
         }
-        .insta-header,
-        .twitter-header {
+        .insta-header, .twitter-header {
             display: flex;
             align-items: center;
-            .h4-display {
-                color: $dark-grey
-            }
+            .h4-display { color: $dark-grey}
         }
         .insta-grid {
             display: flex;
@@ -426,9 +406,7 @@ iframe {
                 height: 86px;
                 border: 1px solid $light-grey;
                 margin: 10px 15px 10px 0;
-                &:hover {
-                    opacity: 0.86;
-                }
+                &:hover {opacity: 0.86}
             }
         }
         .contact-text {
@@ -438,13 +416,13 @@ iframe {
                 background-color: $brand;
                 display: inline;
                 padding: 2px 10px;
-                &:hover {
-                    background-color: darken($brand, 2);
-                }
+                &:hover {background-color: darken($brand, 2)}
             }
         }
     }
 }
+
+// Footer Section
 
 .footer {
     background-color: $darkest-grey;
@@ -467,19 +445,17 @@ iframe {
         transform-origin: 0 100%;
         content: '';
     }
-    &-container {
-        padding: 60px 0 10px;
-    }
+    &-container {padding: 60px 0 10px}
     &-socials {
         display: flex;
         justify-content: center;
         margin: 20px 20px 20px 0;
-        path {
-            fill: white;
-        }
+        path {fill: white}
     }
 }
-// BLOG SECTION
+
+// Project Section
+
 .bg-wrapper {
     padding-top: -80px;
     height: 100%;
@@ -491,29 +467,33 @@ iframe {
     max-width: 700px;
     margin: 0 auto;
     padding: 0 20px 140px;
-    .title {padding: 120px 10px 30px}
-    a {
-        word-break: break-all;
-    }
-    figure {
-        margin-bottom: 38px;
+    display: block;
+    hyphens: auto;
+    .title {padding: 100px 10px 30px}
+    a {word-break: break-all}
+    figure {margin-bottom: 38px}
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
         border: 1px solid lighten($grey, 60);
-        img {width: 100%}
+    }
+    .view-buttons-container {
+        display: flex;
+        justify-content: center;
     }
 }
 
 .other-articles .card-container {
     padding: 80px 0 20px;
-    .card {
-        opacity: 1
-    }
+    .card {opacity: 1}
 }
 
+// Nav for projects
 .article nav {
     width: 200px;
-    ul {
-        transform: translateX(160px);
-    }
+    ul {transform: translateX(160px)}
 }
 
 @import 'mediaqueries';

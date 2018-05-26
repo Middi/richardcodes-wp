@@ -44,6 +44,22 @@ get_header();
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
             <?php endwhile; ?>
+            <div class="view-buttons-container">
+            <?php
+                $check = get_field('url');
+                    if($check) : ?>
+                        <a href="<?php echo get_field('url') ?>" title="view">
+                            <h3 class="view-buttons">View</h3>
+                        </a>
+                    <?php endif; ?>
+                    <?php 
+                        $check = get_field('github_url');
+                        if($check) : ?>
+                            <a href="<?php echo get_field('github_url') ?>" title="github">
+                                <h3 class="view-buttons">GitHub</h3>
+                            </a>
+                    <?php endif; ?>
+            </div>
         </article>
     </div>
 
@@ -89,6 +105,34 @@ get_header();
             <?php endwhile; wp_reset_query(); ?>
         </div>
     </div>
+
+
+    <!--======== SOCIAL SECTION ========-->
+
+    <section id="social" class="social">
+        <div class="social-container">
+            <div class="social-container-half">
+                <div class="insta-header">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/instagram.png" alt="instagram">
+                    <h5 class="highlight">INSTAGRAM</h5>
+                </div>
+
+                <div id="insta-grid" class="insta-grid">
+                </div>
+            </div>
+            <div class="social-container-half">
+                <div class="twitter-header">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/email.png" alt="email">
+                    <h5 class="highlight">CONTACT</h5>
+                </div>
+                <div class="contact-text">
+                    <p class="p-display">Feel free to contact me and I will get back to you as soon as I can.</p>
+                    <a href="mailto:richard@richardmiddleton.me"><strong><p class="p-display p-mail">richard[at]richardmiddleton.me</p></strong></a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
 <?php
 get_footer();

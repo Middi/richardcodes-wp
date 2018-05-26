@@ -1,11 +1,17 @@
+/*=============================================
+=                  ANIMATIONS                 =
+=============================================*/
+
 @keyframes opacity-animation {
     0% {opacity: 0}
     100% {opacity: 1}
 }
 
 @keyframes about {
-    0% {opacity: 0;
-        transform: translateX(60px)}
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -19,12 +25,11 @@
 
 @keyframes hero-animations {
     0% {transform: skew(-10deg) translateX(0%)}
-    100% {
-        transform: skew(-10deg) translateX(60%)
-        }
+    100% {transform: skew(-10deg) translateX(60%)}
 }
 
 
+// Class to trigger
 
 .hero-animation {
     animation: hero-animations 1s ease-in-out 0s;
@@ -65,13 +70,9 @@
     overflow: hidden;
 }
   
-.left-side {
-    left: 0;
-}
+.left-side {left: 0}
   
-.right-side {
-    right: 0;
-}
+.right-side {right: 0}
   
 .bar {
     width: 100%;
@@ -98,27 +99,17 @@
 }
 
 @keyframes rotate-left {
-    to {
-        transform: rotate(30deg);
-    }
-    from {
-        transform: rotate(175deg);
-    }
+    0% {transform: rotate(30deg)}
+    100% {transform: rotate(175deg)}
 }
+
 @keyframes rotate-right {
-    from {
-        transform: rotate(-175deg);
-    }
-    to {
-        transform: rotate(-30deg);
-    }
+    0% {transform: rotate(-175deg)}
+    100% {transform: rotate(-30deg)}
 }
+
 @keyframes rotate-all {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(-360deg)}
 }
 

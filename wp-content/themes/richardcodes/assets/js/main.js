@@ -1,5 +1,4 @@
 // START SKEW ANIMATION
-// Check to see if skew is there.
 if (!document.body.classList.contains('article')) {
     document.querySelector('.hero-skew').classList.add("hero-animation");
 }
@@ -18,7 +17,11 @@ const filterClass = document.querySelectorAll('.filters-item');
 const instaGrid = document.querySelector('#insta-grid');
 
 
-// MOBILE TOGGLE
+
+/*=============================================
+=                  NAVIGATION                 =
+=============================================*/
+
 toggle.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -34,7 +37,9 @@ toggle.addEventListener('click', function (e) {
 });
 
 
-// KONAMI CODE 
+/*=============================================
+=                 KONAMI CODE                 =
+=============================================*/
 if (window.addEventListener) {
     let keys = [];
     const konami = "38,38,40,40,37,39,37,39,66,65,13";
@@ -48,7 +53,9 @@ if (window.addEventListener) {
 }
 
 
-// ANIMATION ON SCROLL
+/*=============================================
+=              ANIMATION ON SCROLL            =
+=============================================*/
 if (!document.body.classList.contains('article')) {
 
     let about = false;
@@ -111,7 +118,9 @@ if (!document.body.classList.contains('article')) {
 }
 
 
-// Smooth scrolling
+/*=============================================
+=               SMOOTH SCROLLING              =
+=============================================*/
 initSmoothScrolling();
 
 function initSmoothScrolling() {
@@ -250,9 +259,11 @@ function jump(target, options) {
 }
 
 
-// AJAX FOR PROJECTS
+/*=============================================
+=                     AJAX                    =
+=============================================*/
 
-// Get the element, add a click listener...
+// Get the filter buttons, add a click listener..
 if(document.querySelector("#filters")) {
     document.querySelector("#filters").addEventListener("click", function (e) {
         restAPI(e.target.getAttribute('data-key'));
@@ -266,7 +277,7 @@ if(document.querySelector("#filters")) {
 }
 
 
-
+// Make the call
 function restAPI(id) {
     const url = `https://richardmiddleton.me/wp-json/wp/v2/projects?categories=${id}`;
 
@@ -299,6 +310,8 @@ function restAPI(id) {
         })
 };
 
+
+// Build DOM
 function buildDom(res) {
 
     if (res) {
