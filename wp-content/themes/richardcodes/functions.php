@@ -124,12 +124,20 @@ add_action( 'widgets_init', 'richardcodes_widgets_init' );
  // include custom jQuery
 function shapeSpace_include_custom_jquery() {
 
-	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
 
 }
 
 add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
 
 function richardcodes_scripts() {
 	wp_enqueue_style( 'richardcodes-style', get_stylesheet_uri() );

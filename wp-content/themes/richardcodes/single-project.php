@@ -86,18 +86,18 @@ get_header();
                                 $check = get_field('url');
                                 if($check) : ?>
                                     <a href="<?php echo get_field('url') ?>" class="more" title="view">
-                                                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/view.svg" alt="view">
+                                                <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/view.svg" alt="view">
                                             </a>
                                         <?php endif; ?>
                                         <?php 
                                             $check = get_field('github_url');
                                             if($check) : ?>
                                                 <a href="<?php echo get_field('github_url') ?>" class="more" title="github">
-                                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/git-view.svg" alt="github">
+                                                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/git-view.svg" alt="github">
                                                 </a>
                                         <?php endif; ?>
                                     <a href="<?php the_permalink(); ?>" class="more" title="Case Study">
-                                        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/case-view.svg" alt="case study">
+                                        <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/case-view.svg" alt="case study">
                                     </a>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ get_header();
         <div class="social-container">
             <div class="social-container-half">
                 <div class="insta-header">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/instagram.png" alt="instagram">
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/instagram.png" alt="instagram">
                     <h5 class="highlight">INSTAGRAM</h5>
                 </div>
 
@@ -122,7 +122,7 @@ get_header();
             </div>
             <div class="social-container-half">
                 <div class="twitter-header">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/email.png" alt="email">
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/email.png" alt="email">
                     <h5 class="highlight">CONTACT</h5>
                 </div>
                 <div class="contact-text">

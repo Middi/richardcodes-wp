@@ -9,7 +9,7 @@ get_header(); ?>
 
 
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'richard_codes' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'richardcodes' ); ?></a>
         
     <!--======= HEADER SECTION ========-->
 
@@ -47,7 +47,7 @@ get_header(); ?>
         <div class="hero-container">
             <div class="hero-text">
                 <div class="hero-text-upper">
-                    <img class="avatar" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/avatar.png" alt="avatar">
+                    <img class="avatar" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/avatar.png" alt="avatar">
                     <h5 class="highlight">Web Developer & Teacher</h5>
                 </div>
                 <h1 class="h1-display">Hey! I'm
@@ -68,12 +68,12 @@ get_header(); ?>
             <div class="empty"></div>
             <div class="about-container-text">
                 <h5 class="highlight">About</h5>
-                <h2 class="h2-display">I’m a web developer from the U.K Currently in Oslo, Norway.</h2>
+                <h2 class="h2-display">I'm a web developer from the U.K Currently in Oslo, Norway.</h2>
                 <p class="p-display">I like to get involved in coding communities. I am a local leader for freeCodeCamp Oslo and Leeds, I also like to run events and help others learn in person and on <strong>YouTube.</strong>
                 </p>
                 <p class="p-display">I run the <strong>freeCodeCamp Instagram</strong> with 11K members, along with my <strong>personal instagram</strong> account.</p>
                 <p class="p-display">Outside of coding I'm a keen musician and when there is snow, I enjoy hitting the slopes and having a snowboard.</p>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/signature.svg" alt="signature" class="signature">
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/signature.svg" alt="signature" class="signature">
                 <p class="p-display">
                     <strong>RICHARD MIDDLETON</strong>
                 </p>
@@ -164,18 +164,18 @@ get_header(); ?>
                                         if($check) : ?>
 
                                             <a href="<?php echo get_field('url') ?>" class="more" title="view">
-                                                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/view.svg" alt="view">
+                                                <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/view.svg" alt="view">
                                             </a>
                                         <?php endif; ?>
                                         <?php 
                                             $check = get_field('github_url');
                                             if($check) : ?>
                                                 <a href="<?php echo get_field('github_url') ?>" class="more" title="github">
-                                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/git-view.svg" alt="github">
+                                                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/git-view.svg" alt="github">
                                                 </a>
                                         <?php endif; ?>
                                     <a href="<?php the_permalink(); ?>" class="more" title="Case Study">
-                                        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/case-view.svg" alt="case study">
+                                        <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/case-view.svg" alt="case study">
                                     </a>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@ get_header(); ?>
         <div class="social-container">
             <div class="social-container-half">
                 <div class="insta-header">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/instagram.png" alt="instagram">
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/instagram.png" alt="instagram">
                     <h5 class="highlight">INSTAGRAM</h5>
                 </div>
 
@@ -201,7 +201,7 @@ get_header(); ?>
             </div>
             <div class="social-container-half">
                 <div class="twitter-header">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/email.png" alt="email">
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/email.png" alt="email">
                     <h5 class="highlight">CONTACT</h5>
                 </div>
                 <div class="contact-text">
