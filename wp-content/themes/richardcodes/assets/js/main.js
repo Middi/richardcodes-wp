@@ -46,7 +46,7 @@ if (window.addEventListener) {
     window.addEventListener("keydown", function (e) {
         keys.push(e.keyCode);
         if (keys.toString().indexOf(konami) >= 0) {
-            window.location = "/anklebiters1918";
+            window.location = "/wp-admin";
             keys = [];
         }
     }, true);
@@ -266,10 +266,10 @@ function jump(target, options) {
 // Get the filter buttons, add a click listener..
 if(document.querySelector("#filters")) {
     document.querySelector("#filters").addEventListener("click", function (e) {
-        restAPI(e.target.getAttribute('data-key'));
         if (e.target && e.target.matches(".filters-item")) {
             for(var i=0; i< filterClass.length; i++){
                 filterClass[i].classList.remove('active');
+                restAPI(e.target.getAttribute('data-key'));
             }
             e.target.classList.add('active');
         }

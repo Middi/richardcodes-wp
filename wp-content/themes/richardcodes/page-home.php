@@ -156,12 +156,10 @@ get_header(); ?>
                                 </a>
                                 <p class="card-p"><?php echo get_the_excerpt(); ?></p>
                                 <div class="card-text-more">
-
                                     
                                     <?php 
                                         $check = get_field('url');
                                         if($check) : ?>
-
                                             <a href="<?php echo get_field('url') ?>" class="more" title="view">
                                                 <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/view.svg" alt="view">
                                             </a>
