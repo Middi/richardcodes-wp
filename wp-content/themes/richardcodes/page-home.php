@@ -135,7 +135,7 @@ get_header(); ?>
             <div id="filters" class="filters">
                 <div class="filters-item active" data-key="11">RECENT</div>
                 <div class="filters-item" data-key="12">HTML</div>
-                <div class="filters-item" data-key="13">CSS</div>
+                <div class="filters-item" data-key="19">REACT</div>
                 <div class="filters-item" data-key="15">JAVASCRIPT</div>
                 <div class="filters-item" data-key="16">NODEJS</div>
                 <div class="filters-item" data-key="14">WORDPRESS</div>
