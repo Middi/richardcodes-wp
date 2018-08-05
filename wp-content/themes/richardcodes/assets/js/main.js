@@ -269,9 +269,9 @@ if(document.querySelector("#filters")) {
         if (e.target && e.target.matches(".filters-item")) {
             for(var i=0; i< filterClass.length; i++){
                 filterClass[i].classList.remove('active');
-                restAPI(e.target.getAttribute('data-key'));
             }
             e.target.classList.add('active');
+            restAPI(e.target.getAttribute('data-key'));
         }
     });
 }
